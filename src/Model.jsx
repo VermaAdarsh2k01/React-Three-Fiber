@@ -1,10 +1,59 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap'
 
 export function Model(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/Summr_Stick-360.glb')
   const { actions } = useAnimations(animations, group)
+  const quickRotate = useRef(null)
+  
+  // Initialize GSAP quickTo for smooth rotation
+  useGSAP(() => {
+    if (group.current) {
+      // Create quickTo function for optimal performance
+      quickRotate.current = gsap.quickTo(group.current.rotation, 'y', {
+        duration: 0.6,
+        ease: "elastic.out(1, 0.3)" // Elastic easing for natural spring effect
+      })
+    }
+  }, { scope: group })
+
+  // Mouse tracking effect with direct quickTo updates
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      if (quickRotate.current) {
+        // Normalize mouse X position to -1 to 1 range
+        const normalizedX = (event.clientX / window.innerWidth) * 2 - 1
+        
+        // Calculate target rotation (±0.3 radians = ±17 degrees)
+        const targetRotation = normalizedX * 0.3
+        
+        // Update rotation using quickTo - no state needed!
+        quickRotate.current(targetRotation)
+      }
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+  
+  // Hovering animation
+  useGSAP(() => {
+    if (group.current) {
+      gsap.to(group.current.position, {
+        y: -1.1, 
+        duration: 2, 
+        ease: "power2.inOut", 
+        yoyo: true, 
+        repeat: -1, 
+      })
+    }
+  }, { scope: group })
+
+
+  
   return (
     <group scale={[2 , 2 , 2]} ref={group} {...props} dispose={null} position={[0,-1.5,0]} >
       <group name="Scene">

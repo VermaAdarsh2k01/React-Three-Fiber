@@ -79,14 +79,14 @@ const Scene = ({ progress }) => {
 
   return (
     <>
-      <OrbitControls
+      {/* <OrbitControls
         ref={controlsRef}
         enablePan={true}
         enableZoom={false}
         enableRotate={true}
         enableDamping={true}
         dampingFactor={0.05}
-      />
+      /> */}
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault

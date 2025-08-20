@@ -42,6 +42,14 @@ export default function App() {
     () => {
       ScrollTrigger.refresh();
 
+      gsap.fromTo(sceneRef.current, {
+        y: "-100vh",
+      }, {
+        y: "0vh",
+        duration: 2,
+        ease: "ease.out",
+      })
+
       const t2 = gsap.timeline({
         scrollTrigger: {
           trigger: mainRef.current,

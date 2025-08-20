@@ -6,7 +6,7 @@ export function Model(props) {
   const { nodes, materials, animations } = useGLTF('/Summr_Stick-360.glb')
   const { actions } = useAnimations(animations, group)
   return (
-    <group scale={[1.8 , 1.8 , 1.8]} ref={group} {...props} dispose={null} position={[0,-1.5,0]} >
+    <group scale={[2 , 2 , 2]} ref={group} {...props} dispose={null} position={[0,-1.5,0]} >
       <group name="Scene">
         <group name="DR_Body" rotation={[0, 0, 0]}>
           <mesh

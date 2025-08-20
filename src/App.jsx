@@ -125,15 +125,15 @@ export default function App() {
         <div className="absolute bottom-6 left-0 w-full h-full flex items-end justify-center ">
           <div className="flex items-center justify-center ">
             <div className="haas text-black text-[1rem] leading-none ">
-              <p>Scroll to explore</p>
+              <p>{ '{Scroll to explore}' }</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className=" h-[100vh] w-full overflow-hidden"></section>
-      <section className=" h-[100vh] w-full overflow-hidden"></section>
-      <section className=" h-[100vh] w-full overflow-hidden"></section>
+      <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
+      <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
+      <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
     </main>
   );
 }

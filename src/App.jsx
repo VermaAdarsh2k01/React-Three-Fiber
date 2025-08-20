@@ -6,6 +6,7 @@ import Scene from "./Scene.jsx";
 import React, { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { useGSAP } from "@gsap/react";
+import Navbar from "./Navbar.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,10 @@ export default function App() {
   useGSAP(
     () => {
       ScrollTrigger.refresh();
+
+      gsap.timeline({
+        
+      })
 
       gsap.fromTo(sceneRef.current, {
         y: "-100vh",
@@ -82,26 +87,53 @@ export default function App() {
   );
 
   return (
-    <main className="overflow-x-hidden" ref={mainRef}>
+    <main className="overflow-x-hidden relative" ref={mainRef}>
+      <div className="fixed top-6 left-0 w-full z-50 flex items-center justify-center " >
+        <Navbar />
+      </div>
       <section
         className="relative grid place-items-center h-[100vh] w-[100vw]"
-        ref={horizontalContainerRef}
+        
       >
-        <div className="text-black text-center absolute top-1/2 left-[0%] translate-y-[-50%] mx-4 w-[200vw]"></div>
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 h-full flex items-center justify-center w-full">
+          <div className="flex items-start justify-between w-[80vw]">
+            
+              <div className="haas-med text-black text-[2.5rem] leading-none flex flex-col items-start w-[40%]">
+                <p>SUMMR STICK</p>
+                <p className="text-[#BEBEBE]">Impurity-free DeoStick <br/> extracted from nature</p>
+                <img className="mt-10 w-[50%] opacity-80" src="/barcode.png" alt="deostick" />
+              </div>
 
+              <div className="haas-med text-black text-[3rem] leading-none text-end w-[30%] ">
+                <p>500gm</p>
+                <p className="haas text-[1rem] mt-16 text-black/70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              </div>
+
+
+          </div>
+        </div>
+          
         <div
           ref={sceneRef}
-          className="h-[100vh] w-[100vw] overflow-hidden flex items-center justify-center"
+          className="h-[100vh] w-[100vw] overflow-hidden flex items-center justify-center z-999"
         >
           <Canvas>
             <Scene progress={progress} />
           </Canvas>
         </div>
+
+        <div className="absolute bottom-6 left-0 w-full h-full flex items-end justify-center ">
+          <div className="flex items-center justify-center ">
+            <div className="haas text-black text-[1rem] leading-none ">
+              <p>Scroll to explore</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <div className=" h-[100vh] w-full overflow-hidden"></div>
-      <div className=" h-[100vh] w-full overflow-hidden"></div>
-      <div className=" h-[100vh] w-full overflow-hidden"></div>
+      <section className=" h-[100vh] w-full overflow-hidden"></section>
+      <section className=" h-[100vh] w-full overflow-hidden"></section>
+      <section className=" h-[100vh] w-full overflow-hidden"></section>
     </main>
   );
 }

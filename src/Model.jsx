@@ -45,7 +45,7 @@ export function Model(props) {
       gsap.to(group.current.position, {
         y: -1.1, 
         duration: 2, 
-        ease: "ease.inOut", 
+        ease: "power1.inOut", 
         yoyo: true, 
         repeat: -1, 
       })
@@ -55,7 +55,7 @@ export function Model(props) {
 
   
   return (
-    <group scale={[2 , 2 , 2]} ref={group} {...props} dispose={null} position={[0,-1.5,0]} >
+    <group scale={[2 , 2 , 2]} ref={group} {...props} dispose={null} position={[0,-1.8,0]} >
       <group name="Scene">
         <group name="DR_Body" rotation={[0, 0, 0]}>
           <mesh

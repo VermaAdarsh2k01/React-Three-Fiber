@@ -15,7 +15,7 @@ export function Model(props) {
       // Create quickTo function for optimal performance
       quickRotate.current = gsap.quickTo(group.current.rotation, 'y', {
         duration: 0.6,
-        ease: "elastic.out(1, 0.3)" // Elastic easing for natural spring effect
+        ease: "ease.out" // Elastic easing for natural spring effect
       })
     }
   }, { scope: group })
@@ -45,7 +45,7 @@ export function Model(props) {
       gsap.to(group.current.position, {
         y: -1.1, 
         duration: 2, 
-        ease: "power2.inOut", 
+        ease: "ease.inOut", 
         yoyo: true, 
         repeat: -1, 
       })

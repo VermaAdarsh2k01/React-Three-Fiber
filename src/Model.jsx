@@ -18,7 +18,7 @@ export function Model(props) {
         ease: "ease.out" // Elastic easing for natural spring effect
       })
     }
-  }, { scope: group })
+  }, { scope: group, dependencies: [] })
 
   // Mouse tracking effect with direct quickTo updates
   useEffect(() => {
@@ -50,7 +50,7 @@ export function Model(props) {
         repeat: -1, 
       })
     }
-  }, { scope: group })
+  }, { scope: group, dependencies: [] })
 
 
   

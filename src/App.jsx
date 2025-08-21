@@ -7,6 +7,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { useGSAP } from "@gsap/react";
 import Navbar from "./Navbar.jsx";
+import SecondSection from "./SecondSection.jsx";
+import VerticalTextAnimation from "./VerticalTextAnimation.jsx";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +66,7 @@ export default function App() {
           start: "top top",
           end: "bottom bottom",
           scrub: 1,
+          markers: true,
           onUpdate: (self) => {
             setProgress(self.progress);
           },
@@ -131,7 +135,9 @@ export default function App() {
         </div>
       </section>
 
-      <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
+      <section className=" h-[100vh] w-full overflow-hidden  relative">
+        <SecondSection />
+      </section>
       <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
       <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
     </main>

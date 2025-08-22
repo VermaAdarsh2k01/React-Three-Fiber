@@ -136,13 +136,13 @@ export default function App() {
         </div>
       </section>
 
-      <section className=" h-[100vh] w-full overflow-hidden  relative">
+      <section className=" h-[100vh] w-full overflow-hidden relative">
         <SecondSection />
       </section>
-      <section className=" h-[100vh] w-full overflow-hidden border-2">
+      <section className=" h-[100vh] w-full overflow-hidden ">
         <ThirdSection />
       </section>
-      <section className=" h-[100vh] w-full overflow-hidden border-2">
+      <section className=" h-[100vh] w-full overflow-hidden ">
         <FourthSection />
       </section>
     </main>

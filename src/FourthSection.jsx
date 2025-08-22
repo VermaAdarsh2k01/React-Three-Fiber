@@ -28,6 +28,12 @@ const FourthSection = () => {
           </a>
         </div>
        </div>
+       <img 
+        src="/Instructions.png" 
+        className='absolute bottom-10 left-1/2 -translate-x-1/2 w-[150px] h-auto' 
+       /> 
+
+       
     </div>
   )
 }

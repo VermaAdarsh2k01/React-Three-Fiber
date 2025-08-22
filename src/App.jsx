@@ -11,6 +11,7 @@ import SecondSection from "./SecondSection.jsx";
 import VerticalTextAnimation from "./VerticalTextAnimation.jsx";
 import ThirdSection from "./ThirdSection.jsx";
 import FourthSection from "./FourthSection.jsx";
+import Footer from "./Footer.jsx";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -92,6 +93,7 @@ export default function App() {
   );
 
   return (
+    <>
     <main className="overflow-x-hidden relative" ref={mainRef}>
       <div className="fixed top-6 left-0 w-full z-50 flex items-center justify-center " >
         <Navbar />
@@ -142,9 +144,11 @@ export default function App() {
       <section className=" h-[100vh] w-full overflow-hidden ">
         <ThirdSection />
       </section>
-      <section className=" h-[100vh] w-full overflow-hidden ">
+      <section className=" h-[100vh] w-full overflow-hidden bg-black">
         <FourthSection />
       </section>
     </main>
+    <Footer />
+    </>
   );
 }

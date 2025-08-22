@@ -2,7 +2,7 @@ import React from 'react'
 
 const FourthSection = () => {
   return (
-    <div className='third-section h-[100vh] w-full overflow-hidden relative'>
+    <div className='third-section h-[100vh] w-full overflow-hidden relative rounded-b-[4rem] bg-white'>
         
         <div className='absolute top-[20%] left-[15%] w-[20%] pointer-events-none flex flex-col text-left'>
             <img src="/ArrowRight.png" className='w-[40%] ml-auto transform rotate-180 '/>

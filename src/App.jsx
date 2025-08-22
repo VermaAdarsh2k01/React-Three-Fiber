@@ -9,6 +9,8 @@ import { useGSAP } from "@gsap/react";
 import Navbar from "./Navbar.jsx";
 import SecondSection from "./SecondSection.jsx";
 import VerticalTextAnimation from "./VerticalTextAnimation.jsx";
+import ThirdSection from "./ThirdSection.jsx";
+import FourthSection from "./FourthSection.jsx";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -66,7 +68,6 @@ export default function App() {
           start: "top top",
           end: "bottom bottom",
           scrub: 1,
-          markers: true,
           onUpdate: (self) => {
             setProgress(self.progress);
           },
@@ -74,11 +75,11 @@ export default function App() {
       });
 
       t2.to(sceneRef.current, {
-        x: "25vw",
+        x: "0vw",
         y: "100vh",
       })
         .to(sceneRef.current, {
-          x: "-25vw",
+          x: "0vw",
           y: "200vh",
       })
         .to(sceneRef.current, {
@@ -138,8 +139,12 @@ export default function App() {
       <section className=" h-[100vh] w-full overflow-hidden  relative">
         <SecondSection />
       </section>
-      <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
-      <section className=" h-[100vh] w-full overflow-hidden border-2"></section>
+      <section className=" h-[100vh] w-full overflow-hidden border-2">
+        <ThirdSection />
+      </section>
+      <section className=" h-[100vh] w-full overflow-hidden border-2">
+        <FourthSection />
+      </section>
     </main>
   );
 }

@@ -70,7 +70,7 @@ const RotatingWords = ({ words, className = "", fontSize = "4rem", lineHeight = 
           <span 
             key={index}
             ref={addToRefs}
-            className="block w-full text-left col-start-1 row-start-1"
+            className="block w-full text-start col-start-1 row-start-1"
             style={{ 
               height: lineHeight, 
               lineHeight: lineHeight,

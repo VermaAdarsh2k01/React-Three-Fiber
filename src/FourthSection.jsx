@@ -107,7 +107,7 @@ const FourthSection = () => {
   return (
     <div ref={containerRef} className='third-section h-[100vh] w-full overflow-hidden relative rounded-b-[4rem] bg-white'>
         
-        <div className='absolute bottom-[60%] xs:bottom-[30%] lg:top-[20%] left-[6%] lg:left-[10%] xl:left-[15%] w-[35%] lg:w-[25%] xl:w-[20%] pointer-events-none flex flex-col text-left fourth-stagger'>
+        <div className='absolute bottom-[60%] xs:bottom-[30%] md:bottom-[50%] lg:top-[20%] left-[6%] lg:left-[10%] xl:left-[15%] w-[35%] lg:w-[25%] xl:w-[20%] pointer-events-none flex flex-col text-left fourth-stagger'>
             <img src="/ArrowRight.png" className='w-[60%] lg:w-[40%] lg:ml-auto transform rotate-180 '/>
             <p className='haas-med text-[1.2rem] xs:text-[1.5rem] leading-none xl:whitespace-nowrap'>Ergonomic Contour-Glide Head</p>
             <p className='haas text-[1rem] leading-none mt-2'>The stick’s applicator surface is subtly concave, mirroring the natural curve of the underarm. Users get full, even coverage in a single swipe without digging or dragging.</p>

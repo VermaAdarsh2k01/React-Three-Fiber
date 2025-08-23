@@ -78,10 +78,10 @@ export const FooterContent = () => {
       
       {/* Bottom section with Summr text and stacked SVGs - pinned to bottom */}
       <div className='absolute bottom-4 lg:bottom-0 left-1/2 transform -translate-x-1/2 flex items-center'>
-        <p className='haas-black tracking-[-0.02em] leading-[0px] text-[6rem] lg:text-[16rem] xl:text-[20rem] mb-4'>Summr</p>
+        <p className='haas-black tracking-[-0.02em] leading-[0px] text-[6rem] md:text-[10rem] lg:text-[16rem] xl:text-[20rem] mb-4'>Summr</p>
         
         {/* Stacked SVGs with switching visibility */}
-        <div className="relative hidden lg:block w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] ml-8">
+        <div className="relative hidden md:block w-[100px] h-[100px] lg:w-[200px] lg:h-[200px] ml-8">
           <img 
             src="/Outline.svg" 
             alt="Outline" 

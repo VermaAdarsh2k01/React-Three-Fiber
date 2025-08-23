@@ -148,7 +148,7 @@ const ThirdSection = () => {
                     <source src="/SummrVideo.mp4" type="video/mp4" />
                 </video>
                 <p 
-                    className='haas-black text-[8rem] xs:text-[11rem] lg:text-[22rem] xl:text-[20rem] leading-none whitespace-nowrap tracking-[-0.01rem] lg:tracking-[-0.15em] opacity-0'
+                    className='haas-black text-[8rem]  xs:text-[11rem] md:text-[17rem] lg:text-[22rem] xl:text-[20rem] leading-none whitespace-nowrap tracking-[-0.01rem] lg:tracking-[-0.15em] opacity-0'
                 >
                     SUMMR
                 </p>
@@ -162,7 +162,7 @@ const ThirdSection = () => {
         </div>
 
 
-        <div className='absolute bottom-[40%] lg:bottom-[20%] right-[6%] lg:right-[10%] xl:right-[15%] w-[30%] lg:w-[25%] xl:w-[20%] pointer-events-none flex flex-col text-right third-stagger'>
+        <div className='absolute bottom-[40%] md:bottom-[20%] lg:bottom-[20%] right-[6%] lg:right-[10%] xl:right-[15%] w-[30%] lg:w-[25%] xl:w-[20%] pointer-events-none flex flex-col text-right third-stagger'>
             <p className='haas-med text-[1.5rem] leading-none lg:whitespace-nowrap'>Side-Click Elevation </p>
             <p className='haas text-[0.9rem] xs:text-[1rem] leading-none mt-2'>A low-profile button sits flush along the barrel. One satisfying click advances precisely 1 mm of product—no messy over-twist, and you can operate it single-handedly while on the move.</p>
             <img src="/ArrowRight.png" className='w-[60%] lg:w-[40%] mr-auto  '/>

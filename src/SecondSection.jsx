@@ -5,10 +5,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CleanImageCarousel from './CleanImageCarousel.jsx'
 import VerticalTextAnimation from './VerticalTextAnimation.jsx'
 import RotatingWords from './RotatingWords.jsx'
+import { useMediaQuery } from 'react-responsive'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const SecondSection = () => {
+    const isMobile = useMediaQuery({ maxWidth: 768 })
+    const scaleRatio = isMobile ? 0.8 : 1
+    let fontSize = "6.5rem"
+    let lineHeight = "6.5rem"
+    
+    if(isMobile){
+        fontSize = "3rem"
+        lineHeight = "3rem"
+    }
+    else{
+        fontSize = "6.5rem"
+        lineHeight = "6.5rem"
+    }
 
     const sectionRef = useRef(null)
 
@@ -33,30 +47,30 @@ const SecondSection = () => {
   return (
     <div ref={sectionRef} className='second-section relative h-[100vh] w-full overflow-hidden'>
         {/* Combined heading and description container */}
-        <div className='absolute top-24 left-12 w-[60%]  flex flex-col justify-between items-start animate-item '>
+        <div className='absolute top-24 left-2 lg:left-12 w-[100%] lg:w-[60%] flex flex-col justify-between items-start animate-item '>
             {/* Main heading */}
             <div>
-                <p className='haas-med text-wrap text-[6.5rem] leading-none text-start'>
+                <p className='haas-med text-wrap text-[3rem] lg:text-[6.5rem] leading-none text-start'>
                     Perfect For All{' '}
                     <RotatingWords 
                         words={['Occasions', 'Events', 'Moments', 'Celebrations']}
-                        fontSize="6.5rem"
-                        lineHeight="6.5rem"
+                        fontSize={fontSize}
+                        lineHeight={lineHeight}
                         className='text-orange-600'
                     />
                 </p>
             </div>
 
             {/* Description text */}
-            <div className='animate-item w-[60%] text-wrap mt-8'>
-                <p className="haas text-start">
+            <div className='animate-item w-[99%] lg:w-[60%] text-wrap mt-4 lg:mt-8'>
+                <p className="haas text-start text-[1rem] lg:leading-6 leading-[1.2rem]  ">
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi odio amet facilis commodi est dolore repellat architecto numquam. Nam quis odio unde, tempora fugiat iure nesciunt placeat ab eius praesentium. 
                 </p>
             </div>
         </div>
         
         {/* Specifications Section - positioned at bottom */}
-        <div className="absolute bottom-24 right-12 w-[50%] space-y-4">
+        <div className="absolute bottom-20 lg:bottom-24 left-2 lg:right-12 lg:w-[50%] w-[100%] lg:space-y-4">
             <div className="flex items-center justify-end gap-4 animate-item">
                 <p className="haas text-lg">
                     <span className="haas-med me-2">Protection level:</span> Category 5 - Maximum Summer Defense

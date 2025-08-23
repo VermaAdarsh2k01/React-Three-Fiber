@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
-*{
+/* Define custom breakpoint for Tailwind CSS v4 */
+@theme {
+  --breakpoint-xs: 375px;
+}
 
+*{
     box-sizing: border-box;
 }
 

@@ -2,13 +2,18 @@ import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
+import { useMediaQuery } from 'react-responsive'
 
 export function Model(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/Summr_Stick-360.glb')
   const { actions } = useAnimations(animations, group)
   const quickRotate = useRef(null)
+  const isMobile = useMediaQuery({ maxWidth: 768 })
   
+  const scaleRatio = isMobile ? 0.8 : 2
+
+  const position = isMobile ? [0, -1, 0] : [0, -1.8, 0]
   // Initialize GSAP quickTo for smooth rotation
   useGSAP(() => {
     if (group.current) {
@@ -55,7 +60,7 @@ export function Model(props) {
 
   
   return (
-    <group scale={[2 , 2 , 2]} ref={group} {...props} dispose={null} position={[0,-1.8,0]} >
+    <group scale={scaleRatio} ref={group} {...props} dispose={null} position={position} >
       <group name="Scene">
         <group name="DR_Body" rotation={[0, 0, 0]}>
           <mesh

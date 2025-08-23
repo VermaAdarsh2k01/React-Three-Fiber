@@ -8,7 +8,6 @@ import Lenis from "lenis";
 import { useGSAP } from "@gsap/react";
 import Navbar from "./Navbar.jsx";
 import SecondSection from "./SecondSection.jsx";
-import VerticalTextAnimation from "./VerticalTextAnimation.jsx";
 import ThirdSection from "./ThirdSection.jsx";
 import FourthSection from "./FourthSection.jsx";
 import Footer from "./Footer.jsx";
@@ -19,8 +18,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function App() {
   const mainRef = useRef(null);
   const sceneRef = useRef(null);
-  const horizontalRef = useRef(null);
-  const horizontalContainerRef = useRef(null);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -51,9 +48,6 @@ export default function App() {
     () => {
       ScrollTrigger.refresh();
 
-      gsap.timeline({
-        
-      })
 
       gsap.fromTo(sceneRef.current, {
         y: "-100vh",
@@ -99,21 +93,20 @@ export default function App() {
         <Navbar />
       </div>
       <section
-        className="relative grid place-items-center h-[100vh] w-[100vw]"
-        
+        className="relative grid place-items-center h-[100vh] w-[100vw] "
       >
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 h-full flex items-center justify-center w-full">
-          <div className="flex items-start justify-between w-[80vw]">
+        <div className="absolute top-1/2 -translate-y-1/2 h-[60vh] lg:h-full flex items-center justify-center w-full">
+          <div className="flex lg:flex-row flex-col items-center justify-between w-[80vw] h-full">
             
-              <div className="haas-med text-black text-[2.5rem] leading-none flex flex-col items-start w-[40%]">
+              <div className="haas-med text-black text-[1.5rem] lg:text-[2.5rem] leading-none flex flex-col items-start lg:w-[40%]">
                 <p>SUMMR STICK</p>
                 <p className="text-[#BEBEBE]">Impurity-free DeoStick <br/> extracted from nature</p>
                 <img className="mt-10 w-[50%] opacity-80" src="/barcode.png" alt="deostick" />
               </div>
 
-              <div className="haas-med text-black text-[3rem] leading-none text-end w-[30%] ">
+              <div className="haas-med text-black text-[1.5rem] lg:text-[3rem] leading-none text-end w-[100%] lg:w-[30%] ">
                 <p>500gm</p>
-                <p className="haas text-[1rem] mt-16 text-black/70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <p className="haas text-[1rem] mt-4 lg:mt-16 text-black/70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
               </div>
 
 
@@ -122,7 +115,7 @@ export default function App() {
           
         <div
           ref={sceneRef}
-          className="h-[100vh] w-[100vw] overflow-hidden flex items-center justify-center z-999"
+          className="h-[100vh] w-[100vw] top-12 overflow-hidden flex items-center justify-center z-999"
         >
           <Canvas>
             <Scene progress={progress} />
@@ -141,7 +134,7 @@ export default function App() {
       <section className=" h-[100vh] w-full overflow-hidden relative">
         <SecondSection />
       </section>
-      <section className=" h-[100vh] w-full overflow-hidden ">
+      <section className=" h-[100vh] w-full overflow-hidden border-2">
         <ThirdSection />
       </section>
       <section className=" h-[100vh] w-full overflow-hidden bg-black">

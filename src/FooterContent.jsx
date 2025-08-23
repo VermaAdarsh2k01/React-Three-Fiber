@@ -7,18 +7,18 @@ export const FooterContent = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowOutline(prev => !prev);
-    }, 2000); // Switch every 2 seconds
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="h-full w-full relative text-white overflow-x-hidden overflow-y-hidden">
-      {/* Top section with marquee text */}
-      <div className="absolute top-20 lg:top-32 left-0 w-full">
+      
+      <div className="absolute top-42  lg:top-32 left-0 w-full">
         <ScrollBaseAnimation 
           baseVelocity={-1} 
-          clasname="text-white font-bold haas text-[4rem] "
+          clasname="text-white font-bold haas text-[2rem] xs:text-[3rem] xl:text-[4rem] "
           scrollDependent={true}
         >
            Click → Glide → Go — fresh confidence on repeat with SolarGuard DeoStick™ ..
@@ -27,28 +27,28 @@ export const FooterContent = () => {
 
              {/* Middle section with footer navigation */}
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full lg:px-20 px-2">
-        {/* Mobile Layout - Stack everything vertically */}
-        <div className="block xs:hidden space-y-8">
-          <div className="flex justify-between">
+        {/* Mobile Layout - All columns in same row */}
+        <div className="block xs:hidden">
+          <div className="flex justify-between items-start ">
             {/* Left column */}
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Home</a>
-              <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Shop</a>
+              <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-sm xl:text-lg">Home</a>
+              <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-sm xl:text-lg">Shop</a>
             </div>
             
             {/* Social links column */}
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Instagram</a>
-              <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Twitter/X</a>
-              <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">LinkedIn</a>
-              <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Facebook</a>
+              <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-sm xl:text-lg">Instagram</a>
+              <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-sm xl:text-lg">Twitter/X</a>
+              <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-sm xl:text-lg">LinkedIn</a>
+              <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-sm xl:text-lg">Facebook</a>
             </div>
-          </div>
-          
-          {/* Copyright section - separate row on mobile */}
-          <div className="flex flex-col items-center space-y-2">
-            <p className="text-white text-lg">2025 © Summr</p>
-            <p className="text-white text-lg">All Rights Reserved</p>
+            
+            {/* Copyright section - now in same row */}
+            <div className="flex flex-col items-end space-y-2">
+              <p className="text-white text-sm xl:text-lg">2025 © Summr</p>
+              <p className="text-white text-sm xl:text-lg">All Rights Reserved</p>
+            </div>
           </div>
         </div>
 
@@ -56,22 +56,22 @@ export const FooterContent = () => {
         <div className="hidden xs:flex justify-between items-start">
           {/* Left column */}
           <div className="flex flex-col space-y-4">
-            <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Home</a>
-            <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Shop</a>
+            <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-lg">Home</a>
+            <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-lg">Shop</a>
           </div>
           
           {/* Middle-right column */}
           <div className="flex flex-col space-y-4">
-            <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Instagram</a>
-            <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Twitter/X</a>
-            <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">LinkedIn</a>
-            <a href="#" className="text-white hover:font-bold transition-all duration-500 text-lg">Facebook</a>
+            <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-lg">Instagram</a>
+            <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-lg">Twitter/X</a>
+            <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-lg">LinkedIn</a>
+            <a href="#" className="text-white hover:text-orange-600 transition-all duration-500 text-lg">Facebook</a>
           </div>
           
           {/* Right column - Copyright section */}
           <div className="flex flex-col items-end space-y-2">
-            <p className="text-white text-lg">2025 © Summr</p>
-            <p className="text-white text-lg">All Rights Reserved</p>
+            <p className="text-white hover:text-orange-600 transition-all duration-500 text-lg">2025 © Summr</p>
+            <p className="text-white hover:text-orange-600 transition-all duration-500 text-lg">All Rights Reserved</p>
           </div>
         </div>
       </div>

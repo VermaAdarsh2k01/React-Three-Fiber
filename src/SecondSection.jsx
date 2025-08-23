@@ -34,10 +34,10 @@ const SecondSection = () => {
   return (
     <div ref={sectionRef} className='second-section relative h-[100vh] w-full overflow-hidden'>
         {/* Combined heading and description container */}
-        <div className='absolute top-24 left-2 lg:left-12 w-[100%] lg:w-[60%] flex flex-col justify-between items-start animate-item '>
+        <div className='absolute top-24 left-2 lg:left-12 xl:left-30  w-[100%] lg:w-[60%] xl:w-[50%] flex flex-col justify-between items-start animate-item '>
             {/* Main heading */}
             <div>
-                <p className='haas-med text-wrap text-[3rem] lg:text-[4.5rem] xl:text-[6.5rem] leading-none text-start'>
+                <p className='haas-med text-wrap text-[3rem] lg:text-[4.5rem] xl:text-[4rem] leading-none text-start'>
                     Perfect For All{' '}
                     <RotatingWords 
                         words={['Occasions', 'Events', 'Moments', 'Celebrations']}
@@ -55,7 +55,7 @@ const SecondSection = () => {
         </div>
         
         {/* Specifications Section - positioned at bottom */}
-        <div className="absolute bottom-20 lg:bottom-24 left-2 lg:left-auto lg:right-12 lg:w-[50%] w-[100%] lg:space-y-4">
+        <div className="absolute bottom-20 lg:bottom-24 left-2 lg:left-auto lg:right-12 xl:right-30 lg:w-[50%] w-[100%] lg:space-y-4">
             <div className="flex items-center justify-end gap-4 animate-item">
                 <p className="haas text-lg lg:text-base xl:text-lg">
                     <span className="haas-med me-2">Protection level:</span> Category 5 - Maximum Summer Defense

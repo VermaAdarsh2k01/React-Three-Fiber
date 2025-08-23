@@ -48,7 +48,6 @@ export default function App() {
     () => {
       ScrollTrigger.refresh();
 
-
       gsap.fromTo(sceneRef.current, {
         y: "-100vh",
       }, {
@@ -101,7 +100,7 @@ export default function App() {
               <div className="haas-med text-black text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem] leading-none flex flex-col items-start lg:w-[50%] xl:w-[40%]">
                 <p>SUMMR STICK</p>
                 <p className="text-[#BEBEBE]">Impurity-free DeoStick <br/> extracted from nature</p>
-                <img className="mt-10 w-[50%] opacity-80" src="/barcode.png" alt="deostick" />
+                <img className="lg:mt-10 mt-8 w-[50%] opacity-80" src="/barcode.png" alt="deostick" />
               </div>
 
               <div className="haas-med text-black text-[1.5rem] lg:text-[3rem] leading-none text-end w-[100%] lg:w-[35%] xl:w-[30%] ">
@@ -118,7 +117,7 @@ export default function App() {
           className="h-[100vh] w-[100vw] top-12 overflow-hidden flex items-center justify-center z-999"
         >
           <Canvas>
-            <Scene progress={progress} />
+            <Scene progress={progress}/>
           </Canvas>
         </div>
 

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 
-const RotatingWords = ({ words, className = "", fontSize = "4rem", lineHeight = "4rem" }) => {
+const RotatingWords = ({ words, className = "" }) => {
   const containerRef = useRef(null);
   const wordsRef = useRef([]);
 
@@ -62,20 +62,14 @@ const RotatingWords = ({ words, className = "", fontSize = "4rem", lineHeight = 
   return (
     <span 
       ref={containerRef}
-      className={`relative overflow-hidden inline-block align-bottom ${className}`}
-      style={{ height: lineHeight }}
+      className={`relative overflow-hidden inline-block align-bottom text-[3rem] leading-[3rem] lg:text-[4.5rem] lg:leading-[4.5rem] xl:text-[6.5rem] xl:leading-[6.5rem] h-[3rem] lg:h-[4.5rem] xl:h-[6.5rem] ${className}`}
     >
       <span className="grid">
         {words.map((word, index) => (
           <span 
             key={index}
             ref={addToRefs}
-            className="block w-full text-start col-start-1 row-start-1"
-            style={{ 
-              height: lineHeight, 
-              lineHeight: lineHeight,
-              fontSize: fontSize 
-            }}
+            className="block w-full text-start col-start-1 row-start-1 h-[3rem] leading-[3rem] lg:h-[4.5rem] lg:leading-[4.5rem] xl:h-[6.5rem] xl:leading-[6.5rem]"
           >
             {word}
           </span>

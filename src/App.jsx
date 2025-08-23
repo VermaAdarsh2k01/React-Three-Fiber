@@ -89,7 +89,7 @@ export default function App() {
   return (
     <>
     <main className="overflow-x-hidden relative" ref={mainRef}>
-      <div className="fixed top-6 left-0 w-full z-50 flex items-center justify-center " >
+      <div className="fixed top-6 left-0 w-full z-[9999] flex items-center justify-center " >
         <Navbar />
       </div>
       <section
@@ -98,15 +98,15 @@ export default function App() {
         <div className="absolute top-1/2 -translate-y-1/2 h-[60vh] lg:h-full flex items-center justify-center w-full">
           <div className="flex lg:flex-row flex-col items-center justify-between w-[80vw] h-full">
             
-              <div className="haas-med text-black text-[1.5rem] lg:text-[2.5rem] leading-none flex flex-col items-start lg:w-[40%]">
+              <div className="haas-med text-black text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem] leading-none flex flex-col items-start lg:w-[50%] xl:w-[40%]">
                 <p>SUMMR STICK</p>
                 <p className="text-[#BEBEBE]">Impurity-free DeoStick <br/> extracted from nature</p>
                 <img className="mt-10 w-[50%] opacity-80" src="/barcode.png" alt="deostick" />
               </div>
 
-              <div className="haas-med text-black text-[1.5rem] lg:text-[3rem] leading-none text-end w-[100%] lg:w-[30%] ">
+              <div className="haas-med text-black text-[1.5rem] lg:text-[3rem] leading-none text-end w-[100%] lg:w-[35%] xl:w-[30%] ">
                 <p>500gm</p>
-                <p className="haas text-[1rem] mt-4 lg:mt-16 text-black/70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <p className="haas text-[1rem] mt-4 lg:mt-12 xl:mt-16 text-black/70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
               </div>
 
 
@@ -134,7 +134,7 @@ export default function App() {
       <section className=" h-[100vh] w-full overflow-hidden relative">
         <SecondSection />
       </section>
-      <section className=" h-[100vh] w-full overflow-hidden border-2">
+      <section className=" h-[100vh] w-full overflow-hidden ">
         <ThirdSection />
       </section>
       <section className=" h-[100vh] w-full overflow-hidden bg-black">

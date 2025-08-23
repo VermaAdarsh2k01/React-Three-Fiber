@@ -10,19 +10,6 @@ import { useMediaQuery } from 'react-responsive'
 gsap.registerPlugin(ScrollTrigger)
 
 const SecondSection = () => {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
-    const scaleRatio = isMobile ? 0.8 : 1
-    let fontSize = "6.5rem"
-    let lineHeight = "6.5rem"
-    
-    if(isMobile){
-        fontSize = "3rem"
-        lineHeight = "3rem"
-    }
-    else{
-        fontSize = "6.5rem"
-        lineHeight = "6.5rem"
-    }
 
     const sectionRef = useRef(null)
 
@@ -50,12 +37,10 @@ const SecondSection = () => {
         <div className='absolute top-24 left-2 lg:left-12 w-[100%] lg:w-[60%] flex flex-col justify-between items-start animate-item '>
             {/* Main heading */}
             <div>
-                <p className='haas-med text-wrap text-[3rem] lg:text-[6.5rem] leading-none text-start'>
+                <p className='haas-med text-wrap text-[3rem] lg:text-[4.5rem] xl:text-[6.5rem] leading-none text-start'>
                     Perfect For All{' '}
                     <RotatingWords 
                         words={['Occasions', 'Events', 'Moments', 'Celebrations']}
-                        fontSize={fontSize}
-                        lineHeight={lineHeight}
                         className='text-orange-600'
                     />
                 </p>
@@ -70,21 +55,21 @@ const SecondSection = () => {
         </div>
         
         {/* Specifications Section - positioned at bottom */}
-        <div className="absolute bottom-20 lg:bottom-24 left-2 lg:right-12 lg:w-[50%] w-[100%] lg:space-y-4">
+        <div className="absolute bottom-20 lg:bottom-24 left-2 lg:left-auto lg:right-12 lg:w-[50%] w-[100%] lg:space-y-4">
             <div className="flex items-center justify-end gap-4 animate-item">
-                <p className="haas text-lg">
+                <p className="haas text-lg lg:text-base xl:text-lg">
                     <span className="haas-med me-2">Protection level:</span> Category 5 - Maximum Summer Defense
                 </p>
             </div>
             
             <div className="flex items-center justify-end gap-4 animate-item">
-                <p className="haas text-lg">
+                <p className="haas text-lg lg:text-base xl:text-lg">
                     <span className="haas-med me-2">Sweat Resistance:</span> 48-hour minimum protection from your sweat
                 </p>
             </div>
             
-            <div className="flex items-center justify-end gap-4 animate-item">
-                <p className="haas text-lg">
+            <div className="flex items-center justify-end gap-4 lg:gap-2 animate-item">
+                <p className="haas text-lg lg:text-base xl:text-lg">
                     <span className="haas-med me-2">Formula type:</span> Aluminum-free with natural minerals - 15% active protection
                 </p>
             </div>

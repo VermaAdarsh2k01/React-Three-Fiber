@@ -104,7 +104,7 @@ const SecondSection = () => {
             {/* Description text */}
             <div className='animate-item w-[99%] lg:w-[60%] text-wrap mt-4 lg:mt-8'>
                 <p className="haas text-start text-[1rem] lg:leading-6 leading-[1.2rem]  ">
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi odio amet facilis commodi est dolore repellat architecto numquam. Nam quis odio unde, tempora fugiat iure nesciunt placeat ab eius praesentium. 
+                From morning meetings to midnight workouts, SUMMR Stick adapts to every body and every agenda. Our balanced, pH-friendly formula neutralises odour without clogging pores, while the clean, unisex scent fades to let your fragrance shine. One glide, zero residue—confidence for everyone, everywhere. 
                 </p>
             </div>
         </div>

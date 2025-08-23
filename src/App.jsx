@@ -112,7 +112,7 @@ export default function App() {
 
               <div className="haas-med text-black text-[1.5rem] lg:text-[3rem] leading-none text-end w-[100%] md:w-[45%] lg:w-[35%] xl:w-[30%] ">
                 <p>500gm</p>
-                <p className="haas text-[1rem] mt-4 lg:mt-12 xl:mt-16 text-black/70">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <p className="haas text-[1rem] mt-4 lg:mt-12 xl:mt-16 text-black/70">SUMMR Stick is a 500-gram, impurity-free deodorant distilled from mineral salts and botanical oils. Its chromed refillable body clicks to advance each swipe, seals tight with a magnetic cap, and glides smoothly for all-day freshness while eliminating synthetic fragrances, parabens, and heavy aluminum.</p>
               </div>
 
 

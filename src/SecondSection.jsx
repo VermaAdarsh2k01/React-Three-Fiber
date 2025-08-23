@@ -41,7 +41,7 @@ const SecondSection = () => {
                 start: "top 70%",
                 end: "bottom 20%",
                 scrub: 1,
-                markers: true,
+                // markers: true,
             }
         });
 

@@ -53,8 +53,10 @@ export default function App() {
       }, {
         y: "0vh",
         duration: 2,
-        ease: "ease.out",
-      })
+        ease: "power2.out",
+        immediateRender: false,
+        overwrite: false
+      });
 
       const t2 = gsap.timeline({
         scrollTrigger: {
@@ -68,10 +70,15 @@ export default function App() {
         },
       });
 
-      t2.to(sceneRef.current, {
-        x: "0vw",
-        y: "100vh",
-      })
+      gsap.set(sceneRef.current, { y: "0vh", delay: 2 });
+
+      t2.fromTo(sceneRef.current, 
+        { y: "0vh" },
+        {
+          x: "0vw",
+          y: "100vh",
+        }
+      )
         .to(sceneRef.current, {
           x: "0vw",
           y: "200vh",

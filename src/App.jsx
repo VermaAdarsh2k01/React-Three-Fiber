@@ -22,10 +22,10 @@ export default function App() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2.5, // Increased from 1.2 to make scrolling slower and smoother
+      duration: 2.5, 
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      wheelMultiplier: 0.5, // Reduces scroll wheel sensitivity (slower scrolling)
-      touchMultiplier: 0.5, // Reduces touch scroll sensitivity on mobile
+      wheelMultiplier: 0.5, 
+      touchMultiplier: 0.5, 
     });
 
     lenis.on("scroll", ScrollTrigger.update);

@@ -10,28 +10,28 @@ const FourthSection = () => {
   const containerRef = useRef(null);
   const isMobile = useMediaQuery({ maxWidth: 768 })
 
-  // Stagger animation for fourth-stagger elements
+  
   useGSAP(
     () => {
       if (!containerRef.current) return;
 
-      // Get all elements with fourth-stagger class
+      
       const leftElement = containerRef.current.querySelector('.fourth-stagger:first-child');
       const rightElement = containerRef.current.querySelector('.fourth-stagger:nth-child(2)');
       const centerElement = containerRef.current.querySelector('.fourth-stagger:nth-child(3)');
       
       if (!leftElement || !rightElement || !centerElement) return;
 
-      // Set initial states
+      
       gsap.set(leftElement, {
         opacity: 0,
-        x: -100, // Start from left
+        x: -100, 
         y: 20
       });
 
       gsap.set(rightElement, {
         opacity: 0,
-        x: 100, // Start from right
+        x: 100, 
         y: 20
       });
 
@@ -41,7 +41,7 @@ const FourthSection = () => {
         scale: 0.9
       });
 
-      // Create main timeline with ScrollTrigger
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
@@ -51,35 +51,35 @@ const FourthSection = () => {
         }
       });
 
-      // Phase 1: Elements enter (0% - 40% of scroll)
+      
       tl.to(leftElement, {
         opacity: 1,
-        x: 0, // Move to original position
+        x: 0, 
         y: 0,
         duration: 0.4,
         ease: "power2.out",
       }, 0)
       .to(rightElement, {
         opacity: 1,
-        x: 0, // Move to original position
+        x: 0,
         y: 0,
         duration: 0.4,
         ease: "power2.out",
-      }, 0) // Same timing as left element 
+      }, 0) 
       .to(centerElement, {
         opacity: 1,
         y: 0,
         scale: 1,
         duration: 0.4,
         ease: "power2.out",
-      }, 0.2) // More delay for center element
+      }, 0.2) 
 
-      // Phase 2: Elements stay in place (40% - 60% of scroll)
+      
       .to([leftElement, rightElement, centerElement], {
-        duration: 0.2, // Hold position
+        duration: 0.2, 
       }, 0.4)
 
-      // Phase 3: Elements exit - fade out (60% - 100% of scroll)
+      
       .to(leftElement, {
         opacity: 0,
         y: -20,

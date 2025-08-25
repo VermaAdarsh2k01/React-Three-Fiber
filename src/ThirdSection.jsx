@@ -24,15 +24,15 @@ const ThirdSection = () => {
         () => {
             if (!containerRef.current) return;
 
-            // Get the center video element
+            
             const centerElement = containerRef.current.querySelector('.third-stagger:first-child');
-            // Get left and right text components
+            
             const leftElement = containerRef.current.querySelector('.third-stagger:nth-child(2)');
             const rightElement = containerRef.current.querySelector('.third-stagger:nth-child(3)');
             
             if (!centerElement || !leftElement || !rightElement) return;
 
-            // Set initial states
+           
             gsap.set(centerElement, {
                 
                 y: 50,
@@ -40,28 +40,28 @@ const ThirdSection = () => {
 
             gsap.set(leftElement, {
                 opacity: 0,
-                x: -100, // Start from left
+                x: -100, 
                 y: 20
             });
 
             gsap.set(rightElement, {
                 opacity: 0,
-                x: 100, // Start from right
+                x: 100, 
                 y: 20
             });
 
-            // Create main timeline with ScrollTrigger
+           
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "top 70%",
                     end: "bottom 20%",
                     scrub: 1,
-                    // markers: true,
+                    
                 }
             });
 
-            // Phase 1: Elements enter (0% - 40% of scroll)
+           
             tl.to(centerElement, {
                 y: 0,
                 scale: 1,
@@ -70,25 +70,25 @@ const ThirdSection = () => {
             }, 0)
             .to(leftElement, {
                 opacity: 1,
-                x: 0, // Move to original position
+                x: 0, 
                 y: 0,
                 duration: 0.4,
                 ease: "power2.out",
-            }, 0.1) // Slight delay
+            }, 0.1) 
             .to(rightElement, {
                 opacity: 1,
-                x: 0, // Move to original position
+                x: 0, 
                 y: 0,
                 duration: 0.4,
                 ease: "power2.out",
-            }, 0.1) // Slight delay
+            }, 0.1) 
 
-            // Phase 2: Elements stay in place (40% - 60% of scroll)
+            
             .to([centerElement, leftElement, rightElement], {
-                duration: 0.2, // Hold position
+                duration: 0.2, 
             }, 0.4)
 
-            // Phase 3: Elements exit - move away from center (60% - 100% of scroll)
+            
             .to(centerElement, {
                 opacity: 0.3,
                 scale: 0.8,
